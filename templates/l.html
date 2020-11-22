@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+
+
+{% block contents %}
+    <h1>Vlog Management Portal</h1>
+
+    <form action="#" method="post">
+    <input type="text" name="nm" value="some" required>
+    <br>
+        <input type="date" name="date" required>
+        <br>
+        <textarea style="width:10cm;height:10cm;" name="vlog" required>write your blog here </textarea>
+        <br>
+        <textarea style="width:10cm;height:10cm;" name="yourself" required>write something about yourself</textarea>
+        <br>
+        <input type="text" style="width:6cm;" name="social" value="enter your social media id" required>
+    <input type="submit" value="submit">
+    </form>
+
+    <h1> WANT TO DELETE YOUR POST ?</h1>
+
+    <form action="#" method="post">
+        <input type="number" name="id" value="enter form id" required>
+        <br>
+        <input type="submit"  value="enter to submit and delete">
+    </form>
+
+{% endblock %}

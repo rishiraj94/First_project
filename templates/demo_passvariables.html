@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>variable pass demo</title>
+</head>
+<body>
+
+    {% if var %}
+        <h1>{{var}}</h1>
+    {% elif lst %}
+        <h2>{{lst}}</h2>
+
+        <h2>the above list in reverse order</h2>
+
+        <h2>{{lst[-1::-1]}}</h2>
+    {% elif d %}
+        <h2>{{d}}</h2>
+
+        <h4>SOME DICTIONARY OPERATIONS</h4>
+        <H4>{{d["myname"]}}</H4>
+    {% elif nam %}
+        <h1>{{nam}}</h1>
+        <ol>
+            {% for i in nam %}
+                <li>{{i}}</li>
+            {% endfor %}
+        </ol>
+    {% endif %}
+
+
+</body>
+</html>

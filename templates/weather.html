@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weather</title>
+    <style>
+        table,th,tr,td {
+            border : 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<h1>{{icon}}</h1>
+    <table>
+        <tr>
+           <th>current temperature</th>
+            <th>feels like</th>
+            <th>minimum temperature</th>
+            <th>maximum temperature</th>
+        </tr>
+        <tr>
+            <td>{{temperature}}</td>
+            <td>{{feelslike}}</td>
+            <td>{{mintemp}}</td>
+            <td>{{maxtemp}}</td>
+        </tr>
+        <tr>
+            <h1>{{tr}}</h1>
+        </tr>
+    </table>
+
+</body>
+</html>

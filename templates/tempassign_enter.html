@@ -1,0 +1,17 @@
+{% extends "templateassignmentinherit.html" %}
+
+{% block contents %}
+
+<div class="jumbotron">
+    <form action="{{url_for('fun_4')}}" method="get">
+
+        ENTER SOMETHING HERE REMEMBER THE RULES :<input type="text" name="val">
+
+        <button >CLICK HERE TO SUBMIT</button>
+
+
+    </form>
+</div>
+
+
+{% endblock %}

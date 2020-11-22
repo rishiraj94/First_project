@@ -1,0 +1,25 @@
+{% extends "templateassignmentinherit.html" %}
+
+{% block contents %}
+
+    {% if flag1 and flag2 %}
+        <div class="jumbotron">
+        <h1 class="display-4">Hello Welcome to udemy template assignment Results</h1>
+        <p class="lead">congratulations you have passed the test</p>
+        <hr class="my-4">
+        <p>your input has character in upper case and a digit at the end</p>
+        <a class="btn btn-primary btn-lg" href="{{url_for('fun_3')}}" role="button">go back and enter again</a>
+        </div>
+
+    {% else %}
+         <div class="jumbotron">
+        <h1 class="display-4">Hello Welcome to udemy template assignment Results</h1>
+        <p class="lead">You failed :(((((</p>
+        <hr class="my-4">
+        <p>go back to home to see the rules again and re enter</p>
+        <a class="btn btn-primary btn-lg" href="{{url_for('fun_2')}}" role="button">go back home</a>
+        </div>
+
+    {% endif %}
+
+{% endblock %}

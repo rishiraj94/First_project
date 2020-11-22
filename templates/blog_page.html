@@ -1,0 +1,45 @@
+{% extends "home.html" %}
+
+{% block contents %}
+
+<div class="header">
+  <h2>My Vlogs</h2>
+</div>
+
+<div class="row">
+  {% for i in l %}
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>{{i.name}}</h2>
+      <h5>{{i.date}} vlod id : {{i.id}}  <a href="{{url_for('edt', id=i.id) }}">EDIT</a> &nbsp; &nbsp;   <button onclick="dell({{i.id}})">ID</button></h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>{{i.vlog}}</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>{{i.about}}</p>
+    </div>
+    <br>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>{{i.social}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+<script>
+  function dell(val){
+    alert(val);
+  }
+</script>
+
+{% endblock %}
